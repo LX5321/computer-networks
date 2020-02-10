@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
             error("ERROR reading from socket");
         }
         printf("Here is the message: %s\n", buffer);
-        n = write(newsockfd, "\nThenks.\nRegards Alexander..", 18);
+        n = write(newsockfd, "\nThenks.\nRegards Alexander..", 28);
         if (n < 0)
             error("ERROR writing to socket");
     }
