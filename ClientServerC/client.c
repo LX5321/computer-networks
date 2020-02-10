@@ -26,11 +26,6 @@ int main(int argc, char **argv) {
         exit(2);
     }
 
-    /*
-    char *buffer = "Hello World.";
-    write(sock_fd, buffer, strlen(buffer));
-    */
-    
     char str[20]; 
     scanf("%[^\n]%*c", str); 
     write(sock_fd, str, strlen(str));
