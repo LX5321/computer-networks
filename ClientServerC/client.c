@@ -26,13 +26,14 @@ int main(int argc, char **argv) {
         exit(2);
     }
 
+    /*
     char *buffer = "Hello World.";
-    printf("SENDING: %s", buffer);
-    printf("===\n");
-
-    // For this trivial demo just assume write() sends all bytes in one go and is not interrupted
-
     write(sock_fd, buffer, strlen(buffer));
+    */
+    
+    char str[20]; 
+    scanf("%[^\n]%*c", str); 
+    write(sock_fd, str, strlen(str));
 
     char resp[1000];
     int len = read(sock_fd, resp, 999);
